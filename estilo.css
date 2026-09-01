@@ -1,0 +1,2395 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #f7f8fc;
+
+    color: #263238;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+::selection {
+
+    background: #facc15;
+
+    color: #172554;
+
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background:
+        rgba(20, 33, 61, 0.97);
+
+    backdrop-filter: blur(10px);
+
+    color: white;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.12);
+
+}
+
+
+nav {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.logo {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: -1px;
+
+}
+
+
+.logo span {
+
+    font-weight: 400;
+
+}
+
+
+.menu {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    position: relative;
+
+    transition: 0.3s;
+
+}
+
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -7px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: #facc15;
+
+    transition: 0.3s;
+
+}
+
+
+.menu a:hover {
+
+    color: #facc15;
+
+}
+
+
+.menu a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 720px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #101b35,
+            #173b72 60%,
+            #1d4e89
+        );
+
+    color: white;
+
+    overflow: hidden;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(255,255,255,0.08);
+
+    right: -180px;
+
+    top: -150px;
+
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(250,204,21,0.15);
+
+    left: -150px;
+
+    bottom: -180px;
+
+}
+
+
+.hero-conteudo {
+
+    max-width: 1200px;
+
+    min-height: 650px;
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.hero-texto {
+
+    flex: 1;
+
+    max-width: 650px;
+
+}
+
+
+.etiqueta {
+
+    color: #facc15;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.hero h1 {
+
+    font-size: clamp(50px, 6vw, 76px);
+
+    line-height: 1;
+
+    margin: 20px 0 10px;
+
+    letter-spacing: -3px;
+
+}
+
+
+.hero h1 strong {
+
+    color: #facc15;
+
+    display: block;
+
+}
+
+
+.linha-amarela {
+
+    width: 70px;
+
+    height: 5px;
+
+    background: #facc15;
+
+    border-radius: 10px;
+
+    margin: 25px 0;
+
+}
+
+
+.hero p {
+
+    max-width: 620px;
+
+    color: #dbe7f5;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero .subtitulo {
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+
+.hero-botoes {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+}
+
+
+.botao {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    background: #facc15;
+
+    color: #172554;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    transition: 0.3s;
+
+}
+
+
+.botao span {
+
+    font-size: 23px;
+
+}
+
+
+.botao:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.25);
+
+}
+
+
+.botao-secundario {
+
+    display: inline-block;
+
+    padding: 14px 23px;
+
+    border: 1px solid
+        rgba(255,255,255,0.4);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.botao-secundario:hover {
+
+    background: white;
+
+    color: #172554;
+
+}
+
+
+/* =====================================================
+   FOTO PRINCIPAL
+===================================================== */
+
+.hero-foto {
+
+    flex: 0 0 430px;
+
+    position: relative;
+
+}
+
+
+.foto-moldura {
+
+    position: relative;
+
+    padding: 12px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border-radius: 25px;
+
+    transform: rotate(2deg);
+
+}
+
+
+.foto-moldura img {
+
+    width: 100%;
+
+    height: 510px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 18px;
+
+    transform: rotate(-2deg);
+
+}
+
+
+.selo-foto {
+
+    position: absolute;
+
+    right: -25px;
+
+    bottom: 30px;
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 50%;
+
+    background: #facc15;
+
+    color: #172554;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.25);
+
+}
+
+
+.selo-foto strong {
+
+    font-size: 18px;
+
+}
+
+
+.selo-foto span {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   INDICADOR
+===================================================== */
+
+.hero-baixo {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    color: #bcd0e8;
+
+    z-index: 3;
+
+}
+
+
+.hero-baixo span {
+
+    display: block;
+
+    color: #facc15;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+}
+
+
+.hero-baixo p {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =====================================================
+   CIDADE
+===================================================== */
+
+.cidade {
+
+    max-width: 1150px;
+
+    margin: 100px auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.cidade-imagem {
+
+    flex: 1;
+
+    position: relative;
+
+}
+
+
+.cidade-imagem img {
+
+    width: 100%;
+
+    height: 420px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    display: block;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.15);
+
+}
+
+
+.legenda-imagem {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    background: white;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.legenda-imagem span {
+
+    font-size: 23px;
+
+}
+
+
+.legenda-imagem strong {
+
+    display: block;
+
+    color: #172554;
+
+}
+
+
+.legenda-imagem small {
+
+    display: block;
+
+    color: #607d8b;
+
+}
+
+
+.cidade-texto {
+
+    flex: 1;
+
+}
+
+
+.titulo-pequeno {
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.cidade-texto h2,
+.igreja-texto h2 {
+
+    color: #172554;
+
+    font-size: 43px;
+
+    line-height: 1.15;
+
+    margin: 15px 0 25px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.cidade-texto p,
+.igreja-texto p {
+
+    color: #607d8b;
+
+    margin-bottom: 18px;
+
+}
+
+
+.cidade-destaque {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-left: 4px solid #facc15;
+
+    background: #eef2ff;
+
+    border-radius: 0 12px 12px 0;
+
+}
+
+
+.cidade-destaque span {
+
+    display: block;
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.cidade-destaque strong {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #172554;
+
+}
+
+
+/* =====================================================
+   NÚMEROS
+===================================================== */
+
+.numeros {
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e40af
+        );
+
+    max-width: 1150px;
+
+    margin: 0 auto 100px;
+
+    border-radius: 25px;
+
+    padding: 45px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    color: white;
+
+    box-shadow:
+        0 20px 45px rgba(23,37,84,0.22);
+
+}
+
+
+.numero {
+
+    flex: 1;
+
+    text-align: center;
+
+    padding: 10px 25px;
+
+}
+
+
+.numero strong {
+
+    display: block;
+
+    color: #facc15;
+
+    font-size: 35px;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+
+}
+
+
+.numero span {
+
+    display: block;
+
+    color: #dbeafe;
+
+    font-size: 15px;
+
+}
+
+
+.separador {
+
+    width: 1px;
+
+    height: 70px;
+
+    background:
+        rgba(255,255,255,0.2);
+
+}
+
+
+/* =====================================================
+   TÍTULOS
+===================================================== */
+
+.titulo {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.titulo span {
+
+    color: #1d4ed8;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.titulo h2 {
+
+    color: #172554;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+
+    margin: 12px 0 15px;
+
+    letter-spacing: -1px;
+
+}
+
+
+.titulo p {
+
+    color: #607d8b;
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================================
+   TRAJETÓRIA
+===================================================== */
+
+.trajetoria {
+
+    padding: 100px 25px;
+
+    background: white;
+
+}
+
+
+.linha-tempo {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    position: relative;
+
+}
+
+
+.linha-tempo::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    width: 2px;
+
+    background: #dbeafe;
+
+}
+
+
+.tempo-item {
+
+    position: relative;
+
+    padding-left: 70px;
+
+    margin-bottom: 45px;
+
+}
+
+
+.tempo-ponto {
+
+    position: absolute;
+
+    left: 10px;
+
+    top: 8px;
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #facc15;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 0 0 2px #1d4ed8;
+
+    z-index: 2;
+
+}
+
+
+.tempo-ano {
+
+    display: inline-block;
+
+    padding: 5px 13px;
+
+    border-radius: 20px;
+
+    background: #172554;
+
+    color: #facc15;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+}
+
+
+.tempo-card {
+
+    padding: 25px;
+
+    background: #f7f8fc;
+
+    border-radius: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+
+}
+
+
+.tempo-card:hover {
+
+    transform: translateX(8px);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.08);
+
+}
+
+
+.tempo-card h3 {
+
+    color: #172554;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.tempo-card p {
+
+    color: #607d8b;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   CONQUISTAS
+===================================================== */
+
+.conquistas {
+
+    padding: 100px 25px;
+
+    background: #f7f8fc;
+
+}
+
+
+.cards {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.card {
+
+    position: relative;
+
+    padding: 32px 27px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px solid #e7eaf0;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.05);
+
+    overflow: hidden;
+
+    transition: 0.35s;
+
+}
+
+
+.card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #facc15;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.12);
+
+}
+
+
+.icone {
+
+    font-size: 43px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card-numero {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 22px;
+
+    color: #dbeafe;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+}
+
+
+.card h3 {
+
+    color: #172554;
+
+    font-size: 22px;
+
+    line-height: 1.25;
+
+    margin-bottom: 12px;
+
+}
+
+
+.card p {
+
+    color: #607d8b;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   ATUAÇÃO
+===================================================== */
+
+.atuacao {
+
+    padding: 110px 25px;
+
+    background:
+        linear-gradient(
+            130deg,
+            #111d38,
+            #1d4ed8
+        );
+
+    color: white;
+
+}
+
+
+.titulo.claro span {
+
+    color: #facc15;
+
+}
+
+
+.titulo.claro h2 {
+
+    color: white;
+
+}
+
+
+.titulo.claro p {
+
+    color: #dbeafe;
+
+}
+
+
+.atuacao-conteudo {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.atuacao-foto {
+
+    flex: 1;
+
+    position: relative;
+
+}
+
+
+.atuacao-foto img {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    /*
+       Enquadramento mais para cima.
+       Ajuda a evitar o corte da cabeça.
+    */
+
+    object-position: center 15%;
+
+    border-radius: 22px;
+
+    display: block;
+
+}
+
+
+.foto-legenda {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 20px;
+
+    padding: 10px 15px;
+
+    background:
+        rgba(17,29,56,0.9);
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+}
+
+
+.atuacao-texto {
+
+    flex: 1;
+
+}
+
+
+.numero-secao {
+
+    color: #facc15;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.atuacao-texto h3 {
+
+    font-size: 36px;
+
+    line-height: 1.2;
+
+    margin: 12px 0 18px;
+
+}
+
+
+.atuacao-texto p {
+
+    color: #dbeafe;
+
+    margin-bottom: 30px;
+
+}
+
+
+.destaques {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.destaque {
+
+    padding: 20px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    border-left: 4px solid #facc15;
+
+    border-radius: 0 10px 10px 0;
+
+}
+
+
+.destaque strong {
+
+    display: block;
+
+    color: #facc15;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+}
+
+
+.destaque span {
+
+    color: #dbeafe;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   IGREJA
+===================================================== */
+
+.cidade-identidade {
+
+    max-width: 1150px;
+
+    margin: 100px auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 70px;
+
+}
+
+
+.igreja-texto {
+
+    flex: 1;
+
+}
+
+
+.igreja-imagem {
+
+    flex: 1;
+
+}
+
+
+.igreja-imagem img {
+
+    width: 100%;
+
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    display: block;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.15);
+
+}
+
+
+.frase-cidade {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #eef2ff;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.frase-cidade > span {
+
+    color: #1d4ed8;
+
+    font-size: 45px;
+
+    line-height: 0.8;
+
+    font-weight: 900;
+
+}
+
+
+.frase-cidade p {
+
+    margin: 0;
+
+    color: #172554;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================================
+   GALERIA
+===================================================== */
+
+.galeria {
+
+    padding: 100px 25px;
+
+    background: #eef2ff;
+
+}
+
+
+.fotos {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.fotos figure {
+
+    position: relative;
+
+    background: white;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.08);
+
+    transition: 0.35s;
+
+}
+
+
+.fotos figure:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.15);
+
+}
+
+
+.fotos img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.5s;
+
+}
+
+
+.fotos figure:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+.fotos figcaption {
+
+    padding: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.fotos figcaption span {
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+}
+
+
+.fotos figcaption strong {
+
+    color: #172554;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================================
+   IMPRENSA E REDES
+===================================================== */
+
+.fontes {
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 100px 25px;
+
+}
+
+
+.fontes-cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+}
+
+
+.fonte-card {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-decoration: none;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    color: #263238;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        border-color 0.3s;
+
+    overflow: hidden;
+
+}
+
+
+.fonte-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background: #facc15;
+
+}
+
+
+.fonte-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,0.12);
+
+    border-color: #dbeafe;
+
+}
+
+
+.fonte-icone {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #eef2ff;
+
+    color: #1d4ed8;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.fonte-conteudo span {
+
+    color: #1d4ed8;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.fonte-conteudo h3 {
+
+    color: #172554;
+
+    font-size: 21px;
+
+    line-height: 1.3;
+
+    margin: 10px 0 12px;
+
+}
+
+
+.fonte-conteudo p {
+
+    color: #607d8b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+
+}
+
+
+.fonte-conteudo strong {
+
+    color: #1d4ed8;
+
+    font-size: 14px;
+
+}
+
+
+.instagram-card .fonte-icone {
+
+    background: #fef3c7;
+
+}
+
+
+.instagram-card .fonte-conteudo span {
+
+    color: #b45309;
+
+}
+
+
+.instagram-card .fonte-conteudo strong {
+
+    color: #b45309;
+
+}
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+footer {
+
+    background: #0b1224;
+
+    color: white;
+
+    padding: 45px 25px 20px;
+
+}
+
+
+.footer-conteudo {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.footer-logo {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+}
+
+
+.footer-conteudo p {
+
+    color: #94a3b8;
+
+    font-size: 15px;
+
+}
+
+
+.footer-links {
+
+    display: flex;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.footer-links a {
+
+    color: #cbd5e1;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+
+}
+
+
+.footer-links a:hover {
+
+    color: #facc15;
+
+}
+
+
+.footer-final {
+
+    max-width: 1150px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.footer-final small {
+
+    color: #64748b;
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+
+    .hero-conteudo {
+
+        gap: 40px;
+
+    }
+
+
+    .hero-foto {
+
+        flex-basis: 360px;
+
+    }
+
+
+    .foto-moldura img {
+
+        height: 430px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .fotos {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .fontes-cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET / CELULAR
+===================================================== */
+
+@media (max-width: 800px) {
+
+
+    nav {
+
+        flex-direction: column;
+
+        gap: 18px;
+
+    }
+
+
+    .menu {
+
+        gap: 18px;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .hero {
+
+        min-height: auto;
+
+    }
+
+
+    .hero-conteudo {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 25px 90px;
+
+    }
+
+
+    .hero-texto {
+
+        max-width: 700px;
+
+    }
+
+
+    .linha-amarela {
+
+        margin: 25px auto;
+
+    }
+
+
+    .hero-botoes {
+
+        justify-content: center;
+
+    }
+
+
+    .hero-foto {
+
+        width: 100%;
+
+        max-width: 420px;
+
+    }
+
+
+    .selo-foto {
+
+        right: -5px;
+
+    }
+
+
+    .cidade {
+
+        flex-direction: column;
+
+        gap: 45px;
+
+    }
+
+
+    .cidade-texto {
+
+        text-align: center;
+
+    }
+
+
+    .cidade-destaque {
+
+        text-align: left;
+
+    }
+
+
+    .numeros {
+
+        margin-left: 25px;
+
+        margin-right: 25px;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+    }
+
+
+    .separador {
+
+        width: 80%;
+
+        height: 1px;
+
+    }
+
+
+    .atuacao-conteudo {
+
+        flex-direction: column;
+
+    }
+
+
+    .atuacao-foto,
+    .atuacao-texto {
+
+        width: 100%;
+
+    }
+
+
+    .atuacao-texto {
+
+        text-align: center;
+
+    }
+
+
+    .cidade-identidade {
+
+        flex-direction: column;
+
+    }
+
+
+    .igreja-texto {
+
+        text-align: center;
+
+    }
+
+
+    .frase-cidade {
+
+        text-align: left;
+
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 550px) {
+
+
+    body {
+
+        font-size: 16px;
+
+    }
+
+
+    nav {
+
+        padding: 15px;
+
+    }
+
+
+    .logo {
+
+        font-size: 22px;
+
+    }
+
+
+    .menu {
+
+        gap: 12px;
+
+    }
+
+
+    .menu a {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-conteudo {
+
+        padding: 55px 20px 80px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .hero .subtitulo {
+
+        font-size: 19px;
+
+    }
+
+
+    .hero p {
+
+        font-size: 16px;
+
+    }
+
+
+    .hero-botoes {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .botao,
+    .botao-secundario {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    .hero-foto {
+
+        max-width: 330px;
+
+    }
+
+
+    .foto-moldura img {
+
+        height: 390px;
+
+    }
+
+
+    .selo-foto {
+
+        width: 100px;
+
+        height: 100px;
+
+        right: -10px;
+
+        bottom: 20px;
+
+    }
+
+
+    .selo-foto strong {
+
+        font-size: 15px;
+
+    }
+
+
+    .selo-foto span {
+
+        font-size: 12px;
+
+    }
+
+
+    .cidade {
+
+        margin: 70px auto;
+
+    }
+
+
+    .cidade-imagem img {
+
+        height: 300px;
+
+    }
+
+
+    .cidade-texto h2,
+    .igreja-texto h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .titulo h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .titulo p {
+
+        font-size: 16px;
+
+    }
+
+
+    .trajetoria,
+    .conquistas,
+    .atuacao,
+    .galeria,
+    .fontes {
+
+        padding-top: 70px;
+
+        padding-bottom: 70px;
+
+    }
+
+
+    .linha-tempo::before {
+
+        left: 12px;
+
+    }
+
+
+    .tempo-item {
+
+        padding-left: 45px;
+
+    }
+
+
+    .tempo-ponto {
+
+        left: 2px;
+
+    }
+
+
+    .tempo-card {
+
+        padding: 20px;
+
+    }
+
+
+    .tempo-card h3 {
+
+        font-size: 20px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .card {
+
+        padding: 28px 23px;
+
+    }
+
+
+    .atuacao-foto img {
+
+        height: 330px;
+
+        object-position: center 15%;
+
+    }
+
+
+    .atuacao-texto h3 {
+
+        font-size: 30px;
+
+    }
+
+
+    .destaques {
+
+        grid-template-columns: 1fr;
+
+        text-align: left;
+
+    }
+
+
+    .igreja-imagem img {
+
+        height: 320px;
+
+    }
+
+
+    .fotos {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .fotos img {
+
+        height: 300px;
+
+    }
+
+
+    .fontes-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .fonte-card {
+
+        padding: 25px;
+
+    }
+
+
+    .footer-conteudo {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .footer-links {
+
+        gap: 15px;
+
+    }
+
+}
