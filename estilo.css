@@ -1244,11 +1244,6 @@ nav {
 
     object-fit: cover;
 
-    /*
-       Enquadramento mais para cima.
-       Ajuda a evitar o corte da cabeça.
-    */
-
     object-position: center 15%;
 
     border-radius: 22px;
@@ -1760,6 +1755,269 @@ nav {
 
 
 /* =====================================================
+   FALE COMIGO
+   ADICIONADO CONFORME SOLICITADO
+===================================================== */
+
+.fale-comigo {
+
+    margin: 0 auto 100px;
+
+    max-width: 1150px;
+
+    padding: 0 25px;
+
+}
+
+
+.fale-conteudo {
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1d4ed8
+        );
+
+    border-radius: 25px;
+
+    padding: 45px 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    color: white;
+
+    box-shadow:
+        0 20px 45px rgba(23,37,84,0.22);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.fale-conteudo::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    right: -80px;
+
+    top: -100px;
+
+}
+
+
+.fale-conteudo::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(250,204,21,0.15);
+
+    left: -90px;
+
+    bottom: -100px;
+
+}
+
+
+.fale-texto {
+
+    position: relative;
+
+    z-index: 2;
+
+    flex: 1;
+
+}
+
+
+.fale-texto > span {
+
+    color: #facc15;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.fale-texto h2 {
+
+    color: white;
+
+    font-size: 42px;
+
+    line-height: 1.1;
+
+    margin: 10px 0 12px;
+
+}
+
+
+.fale-texto p {
+
+    color: #dbeafe;
+
+    font-size: 17px;
+
+    max-width: 560px;
+
+}
+
+
+.fale-contato {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.telefone {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.telefone > span {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+.telefone small {
+
+    display: block;
+
+    color: #bfdbfe;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.telefone strong {
+
+    display: block;
+
+    color: white;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+
+}
+
+
+.botao-whatsapp {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 22px;
+
+    background: #facc15;
+
+    color: #172554;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: 800;
+
+    transition: 0.3s;
+
+    white-space: nowrap;
+
+}
+
+
+.botao-whatsapp:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+
+}
+
+
+.botao-whatsapp span {
+
+    font-size: 20px;
+
+}
+
+
+/* =====================================================
    RODAPÉ
 ===================================================== */
 
@@ -1911,6 +2169,15 @@ footer {
 
         grid-template-columns:
             repeat(2, 1fr);
+
+    }
+
+
+    .fale-conteudo {
+
+        flex-direction: column;
+
+        align-items: flex-start;
 
     }
 
@@ -2083,6 +2350,40 @@ footer {
     .frase-cidade {
 
         text-align: left;
+
+    }
+
+
+    .fale-comigo {
+
+        margin-bottom: 70px;
+
+    }
+
+
+    .fale-conteudo {
+
+        padding: 40px 30px;
+
+        text-align: center;
+
+        align-items: center;
+
+    }
+
+
+    .fale-texto p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+
+    .fale-contato {
+
+        justify-content: center;
 
     }
 
@@ -2373,6 +2674,76 @@ footer {
     .fonte-card {
 
         padding: 25px;
+
+    }
+
+
+    /* =========================================
+       FALE COMIGO - CELULAR
+    ========================================= */
+
+    .fale-comigo {
+
+        padding: 0 20px;
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .fale-conteudo {
+
+        padding: 35px 22px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .fale-texto h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .fale-texto p {
+
+        font-size: 16px;
+
+    }
+
+
+    .fale-contato {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+
+    .telefone {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    .telefone strong {
+
+        font-size: 19px;
+
+    }
+
+
+    .botao-whatsapp {
+
+        width: 100%;
 
     }
 
